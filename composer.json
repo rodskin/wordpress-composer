@@ -18,18 +18,35 @@
           "composer/installers": "v1.0.6"
         }
       }
+	},
+	{
+      "type": "package",
+      "package": {
+        "name": "cedric07/blank-theme-wordpress-grid-bootstrap4",
+        "version": "0.0.1",
+        "type": "wordpress-theme",
+        "dist": {
+          "type": "zip",
+          "url": "https://github.com/cedric07/blank-theme-wordpress-grid-bootstrap4/archive/master.zip"
+        },
+        "require" : {
+          "composer/installers": "v1.0.6"
+        }
+      }
 	}
   ],
   "require": {
     "php": ">=5.4",
-    "johnpbloch/wordpress": "5.3",
+    "johnpbloch/wordpress": "5.4",
     "wpackagist-plugin/advanced-custom-fields": "*",
-	"rodskin/wp-update": "*"
+	"rodskin/wp-update": "*",
+	"cedric07/blank-theme-wordpress-grid-bootstrap4": "*"
   },
   "extra": {
     "wordpress-install-dir": "wordpress",
 	"installer-paths": {
-      "wordpress/wp-content/plugins/{$name}": ["type:wordpress-plugin"]
+      "wordpress/wp-content/plugins/{$name}": ["type:wordpress-plugin"],
+      "wordpress/wp-content/themes/{$name}": ["type:wordpress-theme"]
     }
   }
 }
